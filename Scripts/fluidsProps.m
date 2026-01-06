@@ -13,13 +13,13 @@ DOWTHERM_A.k   = [0.1395, 0.1315, 0.1251, 0.1171, 0.1091, 0.1011, 0.0931, 0.0851
 DOWTHERM_A.mu  = [5, 1.58, 0.91, 0.56, 0.38, 0.27, 0.2, 0.16, 0.12]; % mPa*s
 DOWTHERM_A.nu  = DOWTHERM_A.mu * 1e-3 ./ DOWTHERM_A.rho;  % m^2/s
 
-save("DowthermProps.mat","DOWTHERM_A");
+save("Data\DowthermProps.mat","DOWTHERM_A");
 
 %% Toluene Data
 % Source: REFPROP
 
 Toluene = twoPhaseFluidTables([-300,800],[0.01,10],50,50,100,'Toluene','C:\Program Files (x86)\REFPROP 10.0\');
-save("TolueneProps.mat","Toluene");
+save("Data\TolueneProps.mat","Toluene");
 
 % twoPhaseFluidTables(gcb,Toluene);  % assign to property block
 
